@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DACCD2EB2125BA88004100C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCD2EA2125BA88004100C5 /* AppDelegate.swift */; };
 		DACCD2ED2125BA88004100C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCD2EC2125BA88004100C5 /* ViewController.swift */; };
-		DACCD2F02125BA88004100C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACCD2EE2125BA88004100C5 /* Main.storyboard */; };
 		DACCD2F22125BA89004100C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DACCD2F12125BA89004100C5 /* Assets.xcassets */; };
 		DACCD2F52125BA89004100C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACCD2F32125BA89004100C5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,7 +17,6 @@
 		DACCD2E72125BA88004100C5 /* AutoLayoutPerformance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayoutPerformance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACCD2EA2125BA88004100C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DACCD2EC2125BA88004100C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DACCD2EF2125BA88004100C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DACCD2F12125BA89004100C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DACCD2F42125BA89004100C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DACCD2F62125BA89004100C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,7 +54,6 @@
 			children = (
 				DACCD2EA2125BA88004100C5 /* AppDelegate.swift */,
 				DACCD2EC2125BA88004100C5 /* ViewController.swift */,
-				DACCD2EE2125BA88004100C5 /* Main.storyboard */,
 				DACCD2F12125BA89004100C5 /* Assets.xcassets */,
 				DACCD2F32125BA89004100C5 /* LaunchScreen.storyboard */,
 				DACCD2F62125BA89004100C5 /* Info.plist */,
@@ -124,7 +121,6 @@
 			files = (
 				DACCD2F52125BA89004100C5 /* LaunchScreen.storyboard in Resources */,
 				DACCD2F22125BA89004100C5 /* Assets.xcassets in Resources */,
-				DACCD2F02125BA88004100C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,14 +139,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DACCD2EE2125BA88004100C5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DACCD2EF2125BA88004100C5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DACCD2F32125BA89004100C5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
