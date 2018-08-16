@@ -14,9 +14,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .blue
         
-        [10, 100, 1000, 10000, 100000].forEach {
-            let timeInterval = direct(viewCount: $0)
-            print("direct \($0)views: \(timeInterval)ms")
+        (1...100).forEach {
+            print("direct \($0)views: \(direct(viewCount: $0))ms")
+        }
+        
+        (1...100).forEach {
+            print("indirect \($0)views: \(indirect(viewCount: $0))ms")
         }
     }
     
@@ -29,6 +32,24 @@ class ViewController: UIViewController {
             let childView = UIView()
             customView.addSubview(childView)
             childView.autoPinEdgesToSuperviewEdges()
+        }
+        customView.setNeedsLayout()
+        customView.layoutIfNeeded()
+        customView.removeFromSuperview()
+        return customView.layoutTime
+    }
+    
+    func indirect(viewCount: Int) -> TimeInterval {
+        let customView = CustomView()
+        view.addSubview(customView)
+        customView.autoPinEdgesToSuperviewEdges()
+        
+        var superView: UIView = customView
+        (0..<viewCount).forEach { _ in
+            let childView = UIView()
+            superView.addSubview(childView)
+            childView.autoPinEdgesToSuperviewEdges()
+            superView = childView
         }
         customView.setNeedsLayout()
         customView.layoutIfNeeded()
