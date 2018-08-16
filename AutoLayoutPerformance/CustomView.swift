@@ -10,16 +10,29 @@ import UIKit
 
 class CustomView: UIView {
     var layoutTime: TimeInterval = 0
+    var childView: CustomView?
+    let useUpdateConstraints: Bool
     
-    init() {
+    init(useUpdateConstraints: Bool = false) {
+        self.useUpdateConstraints = useUpdateConstraints
         super.init(frame: .zero)
         backgroundColor = .green
     }
     
     func addChildView() {
-        let customView = CustomView()
-        addSubview(customView)
-        customView.autoPinEdgesToSuperviewEdges()
+        childView = CustomView()
+        guard let childView = childView else { assertionFailure(); return}
+        addSubview(childView)
+        if !useUpdateConstraints {
+            childView.autoPinEdgesToSuperviewEdges()
+        }
+    }
+
+    override func updateConstraints() {
+        if useUpdateConstraints {
+            childView?.autoPinEdgesToSuperviewEdges()
+        }
+        super.updateConstraints()
     }
     
     override func layoutIfNeeded() {
