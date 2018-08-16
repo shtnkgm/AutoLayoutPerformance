@@ -18,6 +18,12 @@ class ViewController: UIViewController {
         view.addSubview(customView)
         customView.autoPinEdgesToSuperviewEdges()
         
+        (0..<30000).forEach { _ in
+            let childView = UIView()
+            customView.addSubview(childView)
+            childView.autoPinEdgesToSuperviewEdges()
+        }
+        
         customView.setNeedsLayout()
         customView.layoutIfNeeded()
     }
