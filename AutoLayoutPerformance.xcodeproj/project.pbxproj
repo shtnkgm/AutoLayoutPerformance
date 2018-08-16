@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA7700682125BDC100D077F3 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7700672125BDC100D077F3 /* CustomView.swift */; };
 		DACCD2EB2125BA88004100C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCD2EA2125BA88004100C5 /* AppDelegate.swift */; };
 		DACCD2ED2125BA88004100C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCD2EC2125BA88004100C5 /* ViewController.swift */; };
 		DACCD2F22125BA89004100C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DACCD2F12125BA89004100C5 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 		2C791E29F2F8867751E02786 /* Pods-AutoLayoutPerformance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoLayoutPerformance.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoLayoutPerformance/Pods-AutoLayoutPerformance.release.xcconfig"; sourceTree = "<group>"; };
 		3AC43DB5446BDDCE2354DBA2 /* Pods_AutoLayoutPerformance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoLayoutPerformance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E70E6B4A3DC2551E0D4AAC5 /* Pods-AutoLayoutPerformance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoLayoutPerformance.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutoLayoutPerformance/Pods-AutoLayoutPerformance.debug.xcconfig"; sourceTree = "<group>"; };
+		DA7700672125BDC100D077F3 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		DACCD2E72125BA88004100C5 /* AutoLayoutPerformance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayoutPerformance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACCD2EA2125BA88004100C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DACCD2EC2125BA88004100C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			children = (
 				DACCD2EA2125BA88004100C5 /* AppDelegate.swift */,
 				DACCD2EC2125BA88004100C5 /* ViewController.swift */,
+				DA7700672125BDC100D077F3 /* CustomView.swift */,
 				DACCD2F12125BA89004100C5 /* Assets.xcassets */,
 				DACCD2F32125BA89004100C5 /* LaunchScreen.storyboard */,
 				DACCD2F62125BA89004100C5 /* Info.plist */,
@@ -196,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA7700682125BDC100D077F3 /* CustomView.swift in Sources */,
 				DACCD2ED2125BA88004100C5 /* ViewController.swift in Sources */,
 				DACCD2EB2125BA88004100C5 /* AppDelegate.swift in Sources */,
 			);
@@ -338,7 +342,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AutoLayoutPerformance/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shotanakagami.AutoLayoutPerformance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -353,7 +360,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AutoLayoutPerformance/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shotanakagami.AutoLayoutPerformance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

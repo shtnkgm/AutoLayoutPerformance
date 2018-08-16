@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import PureLayout
 
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .blue
+        
+        let customView = CustomView()
+        view.addSubview(customView)
+        customView.autoPinEdgesToSuperviewEdges()
     }
     
     init() {
