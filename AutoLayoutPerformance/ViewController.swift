@@ -17,6 +17,9 @@ class ViewController: UIViewController {
         let customView = CustomView()
         view.addSubview(customView)
         customView.autoPinEdgesToSuperviewEdges()
+        
+        customView.setNeedsLayout()
+        customView.layoutIfNeeded()
     }
     
     init() {

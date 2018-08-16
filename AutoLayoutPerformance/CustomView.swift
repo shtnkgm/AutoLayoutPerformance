@@ -14,6 +14,15 @@ class CustomView: UIView {
         backgroundColor = .green
     }
     
+    override func layoutIfNeeded() {
+        let startDate = Date()
+        defer {
+            let msec = NSDate().timeIntervalSince(startDate) * 1000
+            print("\(msec)ms")
+        }
+        super.layoutIfNeeded()
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
