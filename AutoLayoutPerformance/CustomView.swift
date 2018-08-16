@@ -9,6 +9,8 @@
 import UIKit
 
 class CustomView: UIView {
+    var layoutTime: TimeInterval = 0
+    
     init() {
         super.init(frame: .zero)
         backgroundColor = .green
@@ -17,8 +19,7 @@ class CustomView: UIView {
     override func layoutIfNeeded() {
         let startDate = Date()
         defer {
-            let msec = NSDate().timeIntervalSince(startDate) * 1000
-            print("\(msec)ms")
+            layoutTime = NSDate().timeIntervalSince(startDate) * 1000 // ミリ秒
         }
         super.layoutIfNeeded()
     }
