@@ -14,12 +14,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .blue
         
+        print("## direct")
         (1...100).forEach {
-            print("direct \($0)views: \(direct(viewCount: $0))ms")
+            print("\($0) \(direct(viewCount: $0))")
         }
         
+        print("## indirect")
         (1...100).forEach {
-            print("indirect \($0)views: \(indirect(viewCount: $0))ms")
+            print("\($0) \(indirect(viewCount: $0))")
         }
     }
     
