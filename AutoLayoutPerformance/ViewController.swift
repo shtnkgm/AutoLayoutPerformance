@@ -23,6 +23,11 @@ class ViewController: UIViewController {
         (1...100).forEach {
             print("\($0) \(indirect(viewCount: $0))")
         }
+        
+        print("## local")
+        (1...100).forEach {
+            print("\($0) \(local(viewCount: $0))")
+        }
     }
     
     func direct(viewCount: Int) -> TimeInterval {
@@ -52,6 +57,22 @@ class ViewController: UIViewController {
             superView.addSubview(childView)
             childView.autoPinEdgesToSuperviewEdges()
             superView = childView
+        }
+        customView.setNeedsLayout()
+        customView.layoutIfNeeded()
+        customView.removeFromSuperview()
+        return customView.layoutTime
+    }
+    
+    func local(viewCount: Int) -> TimeInterval {
+        let customView = CustomView()
+        view.addSubview(customView)
+        customView.autoPinEdgesToSuperviewEdges()
+        
+        var superView = customView
+        (0..<viewCount).forEach { _ in
+            superView.addChildView()
+            superView = superView.subviews.compactMap { $0 as? CustomView }.first!
         }
         customView.setNeedsLayout()
         customView.layoutIfNeeded()

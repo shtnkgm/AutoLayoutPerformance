@@ -16,6 +16,12 @@ class CustomView: UIView {
         backgroundColor = .green
     }
     
+    func addChildView() {
+        let customView = CustomView()
+        addSubview(customView)
+        customView.autoPinEdgesToSuperviewEdges()
+    }
+    
     override func layoutIfNeeded() {
         let startDate = Date()
         defer {
