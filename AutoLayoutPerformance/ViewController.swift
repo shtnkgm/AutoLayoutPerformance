@@ -14,19 +14,22 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .blue
         
-        print("## direct")
+        print("# direct")
         (1...100).forEach {
-            print("\($0) \(direct(viewCount: $0))")
+            let hash = $0 == 100 ? "# " : ""
+            print("\(hash)\($0) \(direct(viewCount: $0))")
         }
         
-        print("## indirect")
+        print("# indirect")
         (1...100).forEach {
-            print("\($0) \(indirect(viewCount: $0))")
+            let hash = $0 == 100 ? "# " : ""
+            print("\(hash)\($0) \(indirect(viewCount: $0))")
         }
         
-        print("## local")
+        print("# local")
         (1...100).forEach {
-            print("\($0) \(local(viewCount: $0))")
+            let hash = $0 == 100 ? "# " : ""
+            print("\(hash)\($0) \(local(viewCount: $0))")
         }
     }
     
@@ -42,6 +45,8 @@ class ViewController: UIViewController {
         }
         customView.setNeedsLayout()
         customView.layoutIfNeeded()
+        
+        precondition(view.recursiveSubviews.count == viewCount + 1)
         customView.removeFromSuperview()
         return customView.layoutTime
     }
@@ -60,6 +65,8 @@ class ViewController: UIViewController {
         }
         customView.setNeedsLayout()
         customView.layoutIfNeeded()
+        
+        precondition(view.recursiveSubviews.count == viewCount + 1)
         customView.removeFromSuperview()
         return customView.layoutTime
     }
@@ -76,6 +83,8 @@ class ViewController: UIViewController {
         }
         customView.setNeedsLayout()
         customView.layoutIfNeeded()
+        
+        precondition(view.recursiveSubviews.count == viewCount + 1)
         customView.removeFromSuperview()
         return customView.layoutTime
     }
@@ -86,6 +95,12 @@ class ViewController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension UIView {
+    var recursiveSubviews: [UIView] {
+        return subviews + subviews.flatMap { $0.recursiveSubviews }
     }
 }
 
